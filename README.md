@@ -1,27 +1,90 @@
 # GIT
-
 ---
-## DistributedGIT
+## Web Application Development
 
-<img src="DistributedGIT.PNG"/>
+<img src="WebApplicationDevelopment.PNG"/>
+
+## SCM Tool GIT
+
+<img src="SCMTool-GIT.PNG"/>
+
+## Distributed VCS - GIT
+
+<img src="DistributedVCS.PNG"/>
+
+## VCS Introduction:
+
+#### Version Control System:
+- it is used to track application source code additions, modifications or deletions etc.
+- history
+- versions
+   - version1/commit1
+   - version2/commit2
+   - version3/commit3
+
+VCS --> learn as a developer (in general we never write the code)
 
 
----
-## BranchingStrategy
+Developers - task/work
+- Developer1 --> Feature1 - userstory1
+- Developer2 --> Feature2 - usersotory2
+- Developer3 --> Feature3 - userstory3
 
-<img src="BranchingStrategy.PNG"/>
+#### Install and setup Git server and Client software:
+1. setup a git server in two ways
+ - cloud Based git server(online-internet)
+ - on premises git server(install and setup git server)
+       - computers (company building)
+
+2. setup a git client
+ - commandline client ( git bash )
+ - gui client ( git bash gui, tortoise git)
+ - web client (browser)
 
 
----
-## GITWorkFlow
-
-<img src="GITWorkFlow.PNG"/>
-
-
----
 ## GIT Architecture
-
+---
 <img src="GIT_Architecture.png"/>
+
+#### Working On Git Repositories Using URL's
+
+<img src="WorkingOnGitrepositoriesUsingURL.PNG"/>
+
+#### Assignment1:
+(setup git server and create remote repository, clone a copy to local repository, make some changes and push back to remote repository)
+
+1. setup your github account(create a git server)
+2. create a repository (git server)
+3. install git bash (CLI client) on laptop
+4. generate ssh key and copy to git server(one time task)
+   - use ssh-keygen command to generate ssh key in local (laptop)
+   - copy .pub key into git server (account settings - ssh keys) 
+5. clone remote repository into local(git clone - ssh url)
+
+new files:
+
+6. create a file
+7. check the file changes ( git status )
+8. git add filename ( adding new file to staging area -  index file)
+9. git commit -m "message" ( saving our changes to local repository - .git)
+10. git push ( save local repository changes to remote repository )
+
+
+existing files:
+
+6. modify existing file
+7. check the file changes ( git status )
+8. git commit -am "message" ( saving our changes to local repository - .git)
+9. git push ( save local repository changes to remote repository )
+
+## GIT COMMANDS:
+---
+- **git clone** --> to get a copy or snapshot of complete remote repository into local (download a copy of remote repo to laptop)
+- **git status** --> to see the list of files and folders which are having additions, modifications or deletions.
+- **git add** --> git adds the workspace changes to staging area (it must be used for newly added files and folders)
+- **git commit -a** --> git adds the workspace changes to staging area and also saves the changes from staging area to local repository ( -m option can be used for providing a message  while saving )
+- **git push** --> it is used to save or upload the local repository changes to remote repository
+
 
 ----
 ## Working on GITHUB repository
