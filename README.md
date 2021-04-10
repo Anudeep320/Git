@@ -50,6 +50,30 @@ Developers - task/work
 
 <img src="WorkingOnGitrepositoriesUsingURL.PNG"/>
 
+## Working on GITHUB repository
+
+**SSH key create and upload**
+1. create ssh key using gitbash client
+2. upload ssh key to github server
+
+**Create a Test Repository, Download to local Repository and Upload to Remote Repository**
+1. create repository "TEST" in github server
+2. copy ssh url of TEST repository from github server
+3. create a folder (portal) in your laptop home directory(c:/users/username) 
+4. open git bash client
+5. go to portal path (newly created folder - look at 3rd step)
+6. use git clone command to get remote repository into local repository 
+      ex: git clone git@github.com:chinnu1028/TEST.git
+7. using following url go to github page and download zip file(please see the snapshot below)
+8. extract or unzip the downloaded folder
+9. copy and paste all the files and folders from extracted Folder(maven-project2-master) to portal directory(which is created in 3rd step)
+10. git status (it shows unstaged changes) 
+11. git add . (this command will add all the files and folders from working directory to staging area)
+12. git status (it shows staged changes)
+13. git commit -m "added files and folders" (it saves all the changes from staging to local repository)
+14. git push ( it upload all added files from local repository to remote repository)
+15. go to github check the TEST repository, now you see the uploaded files and directories.
+
 #### Assignment1:
 (setup git server and create remote repository, clone a copy to local repository, make some changes and push back to remote repository)
 
@@ -84,35 +108,72 @@ existing files:
 - **git add** --> git adds the workspace changes to staging area (it must be used for newly added files and folders)
 - **git commit -a** --> git adds the workspace changes to staging area and also saves the changes from staging area to local repository ( -m option can be used for providing a message  while saving )
 - **git push** --> it is used to save or upload the local repository changes to remote repository
+- **git checkout** --> it is used to switch between the branches
+         - **Note:** checkout command not only switch branches but also replaces the complete working directory for a branch.
+- **git checkout -b branchname** --> it is used to create a new branch local.
+        - **Note:** need to set upstream branch in order to push to remote repository.
+- **git branch** --> it is used to create a branch locally.
 
 
-----
-## Working on GITHUB repository
-
-**SSH key create and upload**
-1. create ssh key using gitbash client
-2. upload ssh key to github server
-
-**Create a Test Repository, Download to local Repository and Upload to Remote Repository**
-1. create repository "TEST" in github server
-2. copy ssh url of TEST repository from github server
-3. create a folder (portal) in your laptop home directory(c:/users/username) 
-4. open git bash client
-5. go to portal path (newly created folder - look at 3rd step)
-6. use git clone command to get remote repository into local repository 
-      ex: git clone git@github.com:chinnu1028/TEST.git
-7. using following url go to github page and download zip file(please see the snapshot below)
-8. extract or unzip the downloaded folder
-9. copy and paste all the files and folders from extracted Folder(maven-project2-master) to portal directory(which is created in 3rd step)
-10. git status (it shows unstaged changes) 
-11. git add . (this command will add all the files and folders from working directory to staging area)
-12. git status (it shows staged changes)
-13. git commit -m "added files and folders" (it saves all the changes from staging to local repository)
-14. git push ( it upload all added files from local repository to remote repository)
-15. go to github check the TEST repository, now you see the uploaded files and directories.
-
+## SDLC (Software Development Life Cycle )
 ---
-**GIT Administrator Tasks/Activities**
+![image](https://user-images.githubusercontent.com/79018042/114259647-15faf800-99ed-11eb-9561-74b669d43129.png)
+
+![image](https://user-images.githubusercontent.com/79018042/114259679-4773c380-99ed-11eb-9c39-990419dafa97.png)
+
+![image](https://user-images.githubusercontent.com/79018042/114259684-4fcbfe80-99ed-11eb-8a5e-070166d8ccf5.png)
+
+
+client --> software company --> software product
+ - requirements (Business)
+ - design (system or architectural - hardware and software, 64 bit hardware, GIT, Jenkins)
+ - development ( developers will write the code )
+ - testing ( testers will do test and give the approval )
+ - deployment ( deploying or installing application to production environment )
+ - monitoring or maintainance 
+
+Features 
+ - user story1 - developer1
+ - user story2 - developer2
+ - user story3 - developer3
+
+SDLC:
+ - Waterfall model(traditional model) - years of time to develop an application
+ - Agile Model - 3 to 6 months application to our client but not full or complete product
+ - AgileDevops
+
+Release Notes: 
+ - Feature1 (enhancements)
+ - Feature2
+ - bug fixes
+
+GIT:
+- default branch - master/main
+
+Remote repository and Local repository always should be in sync ( except your local changes )
+
+## .git Directory
+---
+- it will track all the changes including modifications, additions, deletions etc.
+
+![image](https://user-images.githubusercontent.com/79018042/114259753-d680db80-99ed-11eb-85cd-ffc223cfca57.png)
+
+- **Object:** it is a memory space where object or binary code will be stored.
+
+#### Config File Types
+<img src="ConfigFiles.PNG"/>
+
+## Application Development Using Agile Model
+---
+<img src="ApplicationDevelopmentUsingAgileModel.PNG"/>
+
+## GIT Branching Strategy/Model
+---
+<img src="GIT_BranchingStrategy.PNG"/>
+
+## GIT Administration
+---
+#### **GIT Administrator Tasks/Activities**
 1. setting up Git server (creating Linux Machine and install GIT software on it)
 2. creating Repositories(Remote Repository & Local Repository)
 3. Access permissions to all Developers and Testers
@@ -121,6 +182,24 @@ existing files:
 6. Resolving Merge Conflicts(if any)
 7. Accepting Merge Requests or Pull Requests(which are created or raised by Developers)
 8. Creating Tags
+
+#### Merge Requests/Pull Requests
+- Merge Requests are raised whenever one branch code needs to be merged with another branch code.
+- In general, Merge Requests are raised by developers in order to get their changes into base branches from their individual branches.
+- Merge requests are approved by Git Administrator for highlevel branches like master/main, release, sprint and feature branches.
+
+- we create feature branches once development is done we merge back with release branch
+
+Project:
+- Developers
+- Testers
+- Devops
+- Security
+- Software Architecture or Infra Team
+
+Developers:
+- write the quality code
+ - local repository(branch) --> push --> remote reposiotry(branch)
 
 ---
 ## GIT cherry-pick
