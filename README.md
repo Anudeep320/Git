@@ -201,6 +201,13 @@ Developers:
 - write the quality code
  - local repository(branch) --> push --> remote reposiotry(branch)
 
+#### Assignment2:
+1. Create a gitlab account
+2. Create a remote repository by importing from github
+3. Create different branches like release, spritn, feature and developer branches
+4. Do some changes in developer branch, commit locally and push to remote  developer branch
+5. Raise merge request and approve it.
+
 ---
 ## GIT cherry-pick
 
